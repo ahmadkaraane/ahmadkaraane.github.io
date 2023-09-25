@@ -1,0 +1,14 @@
+:root {
+    --text-light: #ffffff90;
+    --text: #d4d4d4;
+    --background: #101010;
+    --background-light: #181818;
+    --background-lighter: #282828;
+    --overlay: #10101080;
+    --primary: #005f9e;
+    --primary-overlay: #005f9e70;
+    --secondary: #42bbac;
+    --accent: #6cb3e1;
+    --side-padding: 100px;
+    --primary-light: #227fff;
+}
