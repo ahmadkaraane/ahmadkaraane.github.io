@@ -1,0 +1,61 @@
+@import "../variables.css";
+
+main {
+    margin-top: 100px;
+    background-color: var(--background );
+    padding: 40px var(--side-padding);
+}
+
+.rules {
+    background-color: var(--background-light);
+    border-radius: 16px;
+    padding: 20px;
+}
+.rule {
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid var(--text-light);
+    margin: 40px 0;
+}
+.rule:hover {
+    box-shadow: 0px 0px 5px 1px var(--primary);
+    background-color: var(--overlay);
+    border: 0;
+}
+.rule-title {
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.rule-desc {
+    color: var(--text-light);
+    line-height: 150%;
+}
+
+@media (max-width: 992px) {
+    .rule-title {
+        position: relative;
+    }
+    .rule-title::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-25%);
+        transform-origin: top center;
+        border: 10px solid transparent;
+        border-top: 10px solid var(--text-light);
+        transition: transform .3s ease, border-top-color .3s ease;
+    }
+    .rule-desc {
+        height: 0px;
+        overflow: hidden;
+        transition: height .3s ease;
+    }
+    .rule-open .rule-title::before {
+        transform: rotate(180deg);
+        border-top-color: var(--primary);
+    }
+}

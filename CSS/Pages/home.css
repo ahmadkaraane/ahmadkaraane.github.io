@@ -1,0 +1,196 @@
+@import '../variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Rubik:wght@400&display=swap');
+
+:root {
+    --content-line: -50px
+}
+
+.hide {
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 1s;
+    transform: translateX(-250px);
+    opacity: 0;
+}
+.hero {
+    margin-top: 0px;
+    padding: 0px var(--side-padding);
+    font-family: 'Josefin Sans';
+    height: 600px;
+}
+.hero .container > * {
+    width: 50%;
+    max-width: 850px;
+    /* min-width: 380px; */
+}
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+.hero-text {
+    width: 50%;
+}
+.hero-logo img {
+    width: 100%;
+}
+.hero-text h2 {
+    font-size: 40px;
+    color: var(--text-light);
+}
+.hero-text h1 {
+    font-size: 56px;
+    background-image: linear-gradient(to right, var(--text-light), var(--primary));
+    -webkit-background-clip: text; 
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-top: 18px;
+}
+.hero-text p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+.section {
+    margin-top: 160px;
+    padding: 0px var(--side-padding);
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.section-content > * {
+    max-width: 950px;
+}
+.section-text {
+    width: 47%;
+    align-self: flex-start;
+    margin-top: 50px;
+}
+.section-content::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    left: var(--content-line);
+    background-color: var(--text-light);
+}
+/* Add an id attribute to the ::after pseudo-element */
+.scroll-indicator {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 30px;
+    border-radius: 16px;
+    background-color: var(--primary);
+    left: calc(var(--content-line) - 2px);
+    bottom: 1px;
+    box-shadow: 0px 0px 5px 2px var(--primary-light);
+}
+
+.section-text p {
+    font-size: 20px;
+    color: var(--text-light);
+    line-height: 150%;
+    font-weight: 400;
+}
+.section-img {
+    width: 47%;
+    position: relative;
+}
+.section-img::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: calc(100% - 5px);
+    top: 0;
+    left: 0;
+    /* border-bottom: .5px solid var(--primary);
+    border-left: .5px solid var(--primary); */
+    background-image: linear-gradient(to bottom left, transparent 50%, var(--background) 0, var(--primary));
+}
+.section-img img {
+    width: 100%;
+}
+.even .section-img img {
+    border-bottom-left-radius: 50% 120%;
+
+}
+.section:not(.even) .section-img img {
+    border-top-right-radius: 50% 120%;
+}
+.even .section-content {
+    flex-direction: row-reverse !important;
+}
+.even .section-img::before {
+    background-image: linear-gradient(to bottom right, transparent 50%, var(--background) 0, var(--primary));
+    right: 0;
+    left: unset;
+}
+
+@keyframes content-line {
+    to {
+        top: calc(100% - 30px);
+    }
+}
+@media (max-width: 1287px) {
+    .section-content, .even .section-content {
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .section-text {
+        width: 100%;
+    }
+    .section-img {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+@media (max-width: 1272px) {
+    main {
+        /* margin-top: 500px; */
+    }
+    .hero .container {
+        flex-direction: column;
+    }
+    .hero .container > * {
+        width: 100%;
+    }
+    .hero-text {
+        text-align: center; 
+    }
+    .hero-logo {
+        margin-top: 50px !important;
+    }
+    .hero-text .button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media(max-width: 720px) {
+    :root {
+        --content-line: -20px;
+    }
+}
+@media (max-width: 630px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+}
+@media (max-width: 555px) {
+    :root {
+        --content-line: -10px;
+    }
+}
+@media (max-width: 490px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 410px) {
+    .hero h1, .hero h2 {
+        font-size: 32px;
+    }
+}
