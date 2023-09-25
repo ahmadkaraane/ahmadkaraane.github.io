@@ -158,6 +158,9 @@
     .hero .container > * {
         width: 100%;
     }
+    .hero-logo {
+        width: 80% !important;
+    }
     .hero-text {
         text-align: center; 
     }
