@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="CSS/all.min.css"> -->
+    <script src="https://kit.fontawesome.com/97526397cd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="CSS/variables.css"> -->
+    <link rel="stylesheet" href="CSS/Pages/staff-app.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <title>Staff App | SentryCraft</title>
+</head>
+<body>
+<div class="bgi"></div>
+<div class="color"></div>
+
+
+<div class="overlay"></div>
+<header>
+    <div class="header-color"></div>
+    <div class="copy-popup">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <p>IP Was Copied</p>
+    </div>
+    <canvas id="particle-canvas"></canvas>
+    <nav>
+        <div class="container">
+            <ul class="navbar">
+                <li><a href="index.html"> <i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
+                <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
+                <li><a href="#" class="active"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
+            </ul>
+            <div class="toggle">
+                <i class="fa fa-bars toggler"></i>
+                <!-- Uncomment this if you wanna use image -->
+                <!-- <div class="logo">
+                    <img src="images/logo.png" alt="logo" draggable="false">
+                </div> -->
+                <p>Sentry Craft</p>
+            </div>
+            <div class="mobile-nav">
+                <div class="closer">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <ul class="navbar mobile-navbar">
+                    <li><a href="index.html"> <i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
+                    <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
+                    <li><a href="#" class="active"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="container">
+            <div class="hero-logo logo-animation">
+                <img src="images/logo.png" alt="logo" draggable="false">
+            </div>
+        </div>
+        <div class="servers-info">
+            <div class="discord-info server-info">
+                <div class="icon"><i class="fa-brands fa-discord"></i></div>
+                <div class="server-text">
+                    <p class="discord-online"><span>20</span> Player Online</p>
+                    <p><a href="#">Click To Join</a></p>
+                </div>
+            </div>
+            <div class="mc-info server-info ip">
+                <div class="icon"><i class="fa-solid fa-circle-play"></i></div>
+                <div class="server-text">
+                    <p class="mc-online"><span>20</span> Player Online</p>
+                    <p><a href="#">Click To Join</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <main>
+        <form action="" method="POST" class="staff-app"> 
+            <input type="hidden" name="position" id="selectedPosition">
+        
+            <div class="staff-input" error-message="Full Name must contain only letters, spaces, hyphens, and apostrophes (2-100 characters).">
+                <label for="full-name">Full Name <span>*</span></label>
+                <input type="text" name="full-name" id="full-name" placeholder="Ex. Mido Alawieh">
+            </div>
+            
+            <div class="staff-input" error-message="Email Address is not valid.">
+                <label for="email">Email Address <span>*</span></label>
+                <input type="email" name="email" id="email" placeholder="Ex. mido@gmail.com">
+            </div>
+            
+            <div class="staff-input" error-message="Age must be a number between 16 and 99.">
+                <label for="age">Age <span>*</span></label>
+                <input type="text" name="age" id="age" placeholder="Ex. 16"  >
+            </div>
+            <div class="staff-input" error-message="Discord username must contain between 3 and 32 characters, including letters, numbers, underscores, hyphens, and '#'">
+                <label for="mc-username">Minecraft Username <span>*</span></label>
+                <input type="text" name="mc-name" id="mc-username" placeholder="Ex. MidoAlawieh"  >
+            </div>
+            <div class="staff-input" error-message="Minecraft username must contain between 3 and 16 characters, including letters, numbers, and underscores">
+                <label for="dc-nuserame">Discord Username <span>*</span></label>
+                <input type="text" name="dc-name" id="dc-username" placeholder="Ex. MidoAl"  >
+            </div>
+            
+            <div class="staff-input" error-message="Country must contain only letters, spaces, hyphens, and apostrophes (2-100 characters).">
+                <label for="Country">Country <span>*</span></label>
+                <input type="text" name="Country" id="Country" placeholder="Ex. Lebanon">
+            </div>
+            
+            <div class="staff-input" error-message="Time Zone is not valid.">
+                <label for="time-zone">Time Zone <span>*</span></label>
+                <input type="text" name="time-zone" id="time-zone" placeholder="Ex. GMT +3">
+            </div>
+        
+            <div class="position-dropdown" error-message="Please select a position">
+                <label for="position">Select your desired position</label>
+                <div class="position">
+                <p class="pos-title">Select... <i class="fa-solid fa-caret-down"></i></p>
+                <div class="options">
+                    <div class="helper">Helper</div>
+                    <div class="mod">Mod</div>
+                    <div class="dev">Developer</div>
+                    <div class="admin">Admin</div>
+                    <div class="other">Other</div>  
+                </div>
+                </div>
+            </div>
+        
+            <div class="staff-input" error-message="Experience should be at least 30 characters.">
+                <label for="exp">Experience <span>*</span></label>
+                <input type="text" name="exp" id="exp" placeholder="Ex. 2 years developer in Sentrycraft">
+            </div>
+            
+            <div class="staff-input" error-message="This field should be at least 30 characters.">
+                <label for="reason">What are you applying <span>*</span></label>
+                <input type="text" name="reason" id="reason" placeholder="Ex. Searching for a job">
+            </div>
+            
+            <div class="staff-input" error-message="This field should be at least 30 characters.">
+                <label for="good-staff">What would make you a good staff <span>*</span></label>
+                <input type="text" name="good-staff" id="good-staff" placeholder="Ex. I am friendly..">
+            </div>
+            
+            <button type="submit" class="button"><p>Submit</p></button>
+        </form>
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-start">
+                <h2 class="footer-ip ip">SENTRYCRAFT.NET</h2>
+                <p>We Hope You Enjoyed!</p>
+            </div>
+            <div class="footer-middle">
+                <div class="footer-logo logo-animation">
+                    <img src="images/logo.png" alt="logo" draggable="false">
+                </div>
+                <div class="button"><a href="#">Sign Up</a></div>
+            </div>
+            <div class="footer-end ip">
+                <p><a href="#">CLICK TO JOIN</a></p>
+            </div>
+        </div>
+        <div class="footer-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </footer>
+    <!-- <script src="JS/all.min.js"></script> -->
+    <script src="JS/animation.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/staff-app.js"></script>
+</body>
+</html>

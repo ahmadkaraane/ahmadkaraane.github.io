@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="CSS/all.min.css"> -->
+    <script src="https://kit.fontawesome.com/97526397cd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="CSS/variables.css"> -->
+    <link rel="stylesheet" href="CSS/Pages/store.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <title>Store | SentryCraft</title>
+</head>
+
+<body>
+    <div class="bgi"></div>
+    <div class="color"></div>
+
+
+    <div class="overlay"></div>
+    <header>
+        <div class="copy-popup">
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <p>IP Was Copied</p>
+        </div>
+        <canvas id="particle-canvas"></canvas>
+        <nav>
+            <div class="container">
+                <ul class="navbar">
+                    <li><a href="index.html"> <i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#" class="active"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
+                    <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
+                    <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
+                </ul>
+                <div class="toggle">
+                    <i class="fa fa-bars toggler"></i>
+                    <!-- Uncomment this if you wanna use image -->
+                    <!-- <div class="logo">
+                        <img src="images/logo.png" alt="logo" draggable="false">
+                    </div> -->
+                    <p>Sentry Craft</p>
+                </div>
+                <div class="mobile-nav">
+                    <div class="closer">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <ul class="navbar mobile-navbar">
+                        <li><a href="index.html"> <i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="#" class="active"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
+                        <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
+                        <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="container">
+                <div class="hero-logo logo-animation">
+                    <img src="images/logo.png" alt="logo" draggable="false">
+                </div>
+            </div>
+            <div class="servers-info">
+                <div class="discord-info server-info ip">
+                    <div class="icon"><i class="fa-brands fa-discord"></i></div>
+                    <div class="server-text">
+                        <p class="discord-online"><span>20</span> Player Online</p>
+                        <p><a href="#">Click To Join</a></p>
+                    </div>
+                </div>
+                <div class="mc-info server-info">
+                    <div class="icon"><i class="fa-solid fa-circle-play"></i></div>
+                    <div class="server-text">
+                        <p class="mc-online"><span>20</span> Player Online</p>
+                        <p><a href="#">Click To Join</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="section-title">
+                <h3>Store</h3>
+            </div>
+            <div class="store">
+                <div class="store-content">
+                    <div class="side-one">
+                        <div class="store-categories">
+                            <div class="title">
+                                <h3>Categories</h3>
+                            </div>
+                            <div class="store-lists">
+                                <ul>
+                                    <li class="home store-nav active-nav">Home</li>
+                                    <li class="ranks store-nav">Ranks</li>
+                                    <li class="gems store-nav">gems</li>
+                                    <li class="crates store-nav">Crates</li>
+                                    <!-- Add more here -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="recent-customers">
+                            <div class="title">
+                                <h3>Recent Customers</h3>
+                            </div>
+                            <div class="customer-heads">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-store store-categories">
+                        <div class="mobile-store-title title">
+                            <h3>Categories</h3>
+                        </div>
+                        <div class="store-lists">
+                            <ul class="mobile-cates">
+                                <li class="home store-nav">Home</li>
+                                <li class="ranks store-nav">Ranks</li>
+                                <li class="gems store-nav">gems</li>
+                                <li class="crates store-nav">Crates</li>
+                                <!-- Add more here -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="stores">
+                        <div class="store-info home-items">
+                            <div class="title">
+                                <h3>SentryCraft</h3>
+                            </div>
+                            <div class="content">
+                                <h3 class="intro-title title">Welcome</h3>
+                                <p class="store-intro">
+                                    Welcome to the exclusive SentryCraft Store! To embark on your shopping journey,
+                                    simply choose a category from the convenient sidebar. It's worth mentioning that our
+                                    ranks come with a one-time fee and grant you permanent access!
+                                </p>
+                                <h3 class="help-title title">Need Help?</h3>
+                                <p class="store-help">Explore our Minecraft store's vast selection of in-game treasures,
+                                    suitable for both seasoned adventurers and beginners. Join our Discord community for
+                                    assistance and camaraderie today!</p>
+                                <h3 class="refund-title title">Redund Policy</h3>
+                                <p class="store-refund">Please note that our refund policy is uncompromising, and we
+                                    regret to inform you that all purchases are non-refundable. Your Minecraft treasures
+                                    are yours to keep, and we appreciate your understanding in this matter. If you have
+                                    any questions or concerns, please don't hesitate to reach out to our support team
+                                    for further assistance.</p>
+                            </div>
+                        </div>
+                        <div class="store-items ranks-items hidden">
+                            <div class="title">
+                                <h3>Ranks</h3>
+                            </div>
+                            <div class="content">
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/ranks.png" alt="ranks" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/ranks.png" alt="ranks" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/ranks.png" alt="ranks" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/ranks.png" alt="ranks" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/ranks.png" alt="ranks" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/ranks.png" alt="ranks" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="store-items gems-items hidden">
+                            <div class="title">
+                                <h3>Gems</h3>
+                            </div>
+                            <div class="content">
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/gems.png" alt="gems" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/gems.png" alt="gems" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/gems.png" alt="gems" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/gems.png" alt="gems" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/gems.png" alt="gems" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/gems.png" alt="gems" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="store-items crates-items hidden">
+                            <div class="title">
+                                <h3>Crates</h3>
+                            </div>
+                            <div class="content">
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/crates.png" alt="crates" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/crates.png" alt="crates" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/crates.png" alt="crates" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/crates.png" alt="crates" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/crates.png" alt="crates" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/crates.png" alt="crates" draggable="false">
+                                    </div>
+                                    <div class="item-text">
+                                        <div class="price">$5.77</div>
+                                        <div class="button"><a href="#">Buy</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-start">
+                <h2 class="footer-ip ip">SENTRYCRAFT.NET</h2>
+                <p>We Hope You Enjoyed!</p>
+            </div>
+            <div class="footer-middle">
+                <div class="footer-logo logo-animation">
+                    <img src="images/logo.png" alt="logo" draggable="false">
+                </div>
+                <div class="button"><a href="#">Sign Up</a></div>
+            </div>
+            <div class="footer-end ip">
+                <p><a href="#">CLICK TO JOIN</a></p>
+            </div>
+        </div>
+        <div class="footer-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </footer>
+    <!-- <script src="JS/all.min.js"></script> -->
+    <script src="JS/animation.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
