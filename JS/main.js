@@ -15,16 +15,19 @@ const config = {
 const discordOnline = document.querySelector(".discord-online");
 const minecraftOnline = document.querySelector(".mc-online");
 // Get the header element's computed height
-const headerI = document.querySelector("header");
-const headerHeight = window.getComputedStyle(headerI).height;
-
-// Set the same height for the bgi and color elements
 const bgi = document.querySelector(".bgi");
 const color = document.querySelector(".color");
+const headerH = document.querySelector("header"); // Replace "header" with the actual selector for your header element
 
-if (bgi && color) {
-  bgi.style.height = headerHeight;
-  color.style.height = headerHeight;
+if (bgi && color && headerH) {
+  const headerStyles = getComputedStyle(headerH);
+  const headerHeightWithPadding =
+    headerH.offsetHeight +
+    parseFloat(headerStyles.paddingTop) +
+    parseFloat(headerStyles.paddingBottom);
+
+  bgi.style.height = `${headerHeightWithPadding}px`;
+  color.style.height = `${headerHeightWithPadding}px`;
 }
 
 let toggler = document.querySelector(".toggler");
@@ -191,8 +194,11 @@ const getMinecraftOnlinePlayer = async () => {
     const apiUrl = `https://api.mcsrvstat.us/2/${serverIp}`;
     let response = await fetch(apiUrl);
     let data = await response.json();
-
-    minecraftOnline.innerText = `${data.players.online} Players Online`;
+    if (data.online === true) {
+      minecraftOnline.innerText = `${data.players.online} Players Online`;
+    } else {
+      minecraftOnline.innerHTML = "Server Is Offline";
+    }
   } catch (e) {
     console.log(e);
     minecraftOnline.innerHTML = "None";
@@ -229,3 +235,17 @@ window.addEventListener("scroll", updateScrollIndicators);
 
 // Initially update the scrolling indicators when the page loads
 window.addEventListener("load", updateScrollIndicators);
+
+let members = document.querySelectorAll(".member");
+let memberName = document.querySelectorAll(".member-name");
+let memberImage = document.querySelectorAll(".member-img");
+
+for (let i = 0; i < members.length; i++) {
+  let memberBody = document.createElement("img");
+  memberBody.setAttribute("alt", memberName[i].innerText);
+  memberBody.setAttribute(
+    "src",
+    `https://mc-heads.net/body/${memberName[i].innerText}`
+  );
+  memberImage[i].appendChild(memberBody);
+}
