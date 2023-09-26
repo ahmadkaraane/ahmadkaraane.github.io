@@ -1,0 +1,62 @@
+@import '../variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Rubik:wght@400&display=swap');
+
+
+main {
+    padding: 10px var(--side-padding);
+}
+.members {
+    width: 100%;
+    background-color: var(--background-light);
+    border-radius: 8px;
+    padding: 10px 20px
+}
+.members h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+.members .container {
+    display: flex;
+    /* justify-content: space-btween; */
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.members > * {
+    margin: 25px 0;
+}
+.member {
+    min-width: 300px;
+    width: 30%;
+    height: 100px;
+    background-color: var(--background-lighter);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    padding: 0 20px;
+    border-radius: 6px;
+}
+.member-name h2 {
+    font-size: 22px;
+}
+.member-img {
+    width: 75px;
+    transform: translateY(30%);
+}
+.member-img img {
+    width: 100%;
+}
+.owners h2 {
+    color: #bf0133;
+}
+.admins h2 {
+    color: #01bfa6;
+
+}
+
+@media (max-width: 879px) {
+    .member {
+        width: 100%;
+        gap: 40px;
+    }
+}

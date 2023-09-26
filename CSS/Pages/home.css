@@ -10,12 +10,6 @@
     transform: translateX(-250px);
     opacity: 0;
 }
-.hero {
-    margin-top: 0px;
-    padding: 0px var(--side-padding);
-    font-family: 'Josefin Sans';
-    height: 600px;
-}
 .hero .container > * {
     width: 50%;
     max-width: 850px;
