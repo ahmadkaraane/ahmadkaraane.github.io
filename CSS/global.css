@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Rubik:wght@300;400;500;600&display=swap');
 @import 'variables.css';
-/* :root {
-    --text-light: #ffffff90;
-    --text: #d4d4d4;
-    --background: #101010;
-    --overlay: #10101080;
-    --primary: #005f9e;
-    --secondary: #42bbac;
-    --accent: #6cb3e1;
-    --side-padding: 100px;
-} */
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +29,7 @@
     color: var(--text);
 }
 .copy-popup i {
-    color: #27D964;
+    color: var(--popup);
     width: 25px;
     height: 25px;
     border: 1px solid var(--text-light);
@@ -78,7 +68,7 @@ header {
     padding-bottom: 50px;
 }
 main {
-    margin-top: 100px;
+    margin-top: 75px;
 }
 .overlay {
     display: none;
@@ -247,7 +237,7 @@ nav {
     cursor: pointer;
 }
 .closer i:hover {
-    background-color: #a6a6a650;
+    background-color: var(--closer-hover)
 }
 .mobile-nav {
     transform: translateX(0);
@@ -283,7 +273,7 @@ nav {
     align-items: center;
     border-radius: 8px;
     padding: 15px;
-    background-color: #ffffff30;
+    background-color: var(--icon-background);
     font-size: 16px;
 }
 .server-text {

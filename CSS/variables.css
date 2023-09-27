@@ -6,9 +6,12 @@
     --background-lighter: #282828;
     --overlay: #10101080;
     --primary: #005f9e;
-    --primary-overlay: #005f9e70;
+    --primary-overlay: #005f9e50;
     --secondary: #42bbac;
     --accent: #6cb3e1;
     --side-padding: 100px;
     --primary-light: #227fff;
+    --icon-background: #ffffff30;
+    --popup: #27D964;
+    --closer-hover: #a6a6a650;
 }
