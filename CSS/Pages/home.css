@@ -43,11 +43,13 @@
     font-size: 14px;
     color: var(--text-light);
 }
-.section {
+.section:not(:nth-child(1)) {
     margin-top: 160px;
-    padding: 0px var(--side-padding);
 }
+.section {
+    padding: 0px var(--side-padding);
 
+}
 .section-content {
     display: flex;
     align-items: center;
