@@ -107,49 +107,6 @@ for (let i in config.topCustomers) {
   }
 }
 
-let storeNavs = document.querySelectorAll(".store-nav, .mobile-store-nav");
-let storeInfo = document.querySelector(".store-info");
-let currentlyActive = storeInfo;
-
-function handleNavClick(navElement) {
-  let cateClass = navElement.classList[0];
-  let storeItems = document.querySelector(`.${cateClass}-items`);
-  let activeNav = document.querySelectorAll(".active-nav");
-  let toActive = document.querySelectorAll(`.${cateClass}`);
-
-  // Check if the clicked navElement is already active
-  if (!navElement.classList.contains("active-nav")) {
-    currentlyActive.classList.remove("show");
-    activeNav.forEach((nav) => {
-      nav.classList.remove("active-nav");
-    });
-    storeItems.classList.remove("hidden");
-    toActive.forEach((nav) => {
-      nav.classList.add("active-nav");
-    });
-    storeItems.classList.add("fade");
-    setTimeout(() => {
-      storeItems.classList.add("show");
-    }, 100);
-    storeItems.addEventListener(
-      "transitionend",
-      () => {
-        storeItems.classList.remove("fade");
-      },
-      { once: true }
-    );
-    currentlyActive.classList.add("hidden");
-    currentlyActive = storeItems;
-  }
-}
-
-storeNavs.forEach((nav) => {
-  nav.addEventListener("click", (event) => {
-    event.preventDefault();
-    handleNavClick(nav);
-  });
-});
-
 let rule = document.getElementsByClassName("rule");
 let ruleDesc = document.getElementsByClassName("rule-desc");
 if (rule != null) {
