@@ -175,13 +175,20 @@ function updateScrollIndicators() {
 
   sectionContentContainers.forEach((container) => {
     const scrollIndicator = container.querySelector(".scroll-indicator");
-    const scrollPercentage =
-      (window.scrollY /
-        (document.documentElement.scrollHeight - window.innerHeight)) *
-      100;
-    const topPosition = `calc(${scrollPercentage}% - 30px)`;
-
     if (scrollIndicator) {
+      const containerTop = container.getBoundingClientRect().top;
+      const containerHeight = container.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrollY = window.scrollY;
+      console.log(containerTop);
+      console.log(windowHeight);
+      // Calculate the scroll indicator position based on container visibility
+      const maxTop = 100 - (30 / window.innerHeight) * 100; // Calculate the maximum value
+      const topPosition = `${Math.min(
+        maxTop,
+        Math.max(0, (1 - containerTop / windowHeight) * 100)
+      ).toFixed(2)}%`;
+
       scrollIndicator.style.top = topPosition;
     }
   });
