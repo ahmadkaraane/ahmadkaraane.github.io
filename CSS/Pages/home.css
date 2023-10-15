@@ -82,7 +82,9 @@
     background-color: var(--primary);
     left: calc(var(--content-line) - 2px);
     bottom: 1px;
+    top: 0;
     box-shadow: 0px 0px 5px 2px var(--primary-light);
+    /* animation: content-line 5s ease infinite alternate; */
 }
 
 .section-text p {

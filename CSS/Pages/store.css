@@ -228,7 +228,7 @@ main {
 }
 .item-img {
     width: 70%;
-    background-color: #33333350;
+    background-color: var(--background-img);
     padding: 20px;
     border-radius: 12px;
 }
@@ -334,9 +334,11 @@ main {
     top: 20px;
     right: 20px;
     padding: 10px;
+    color: var(--text-light)
 }
 .item-close:hover {
     background-color: var(--background-lighter);
+    color: white;
     border-radius: 6px;
     cursor: pointer;
 }
