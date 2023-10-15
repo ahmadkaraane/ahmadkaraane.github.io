@@ -1,10 +1,11 @@
 :root {
     --text-light: #ffffff90;
     --text: #d4d4d4;
-    --background: #101010;
-    --background-light: #181818;
-    --background-lighter: #282828;
-    --overlay: #10101080;
+    --background: #0f0f0f; /* Dark gray background */
+    --background-light: #1a1a1a; /* Slightly lighter gray background */
+    --background-lighter: #232323; /* Even lighter gray background */
+    --background-img: #24242450; /* Grayish background with reduced opacity */
+    --overlay: #0f0f0f80; /* Dark gray overlay with reduced opacity */
     --primary: #005f9e;
     --primary-overlay: #005f9e50;
     --secondary: #42bbac;
@@ -12,6 +13,6 @@
     --side-padding: 100px;
     --primary-light: #227fff;
     --icon-background: #ffffff30;
-    --popup: #27D964;
+    --popup: #27D964; /* Bright green for popups */
     --closer-hover: #a6a6a650;
 }
