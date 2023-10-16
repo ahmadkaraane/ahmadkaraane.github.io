@@ -329,9 +329,9 @@ footer {
     padding: 50px var(--side-padding);
     display: flex;
     gap: 20px;
-    max-width: 1800px;
     position: relative;
     left: 50%;
+    border: 1px solid red;
 }
 .play-now-desc p, .join-us-desc p {
     line-height: 150%;
@@ -400,6 +400,12 @@ footer p, .footer-middle a {
 @media (min-width: 1800px) {
     footer {
         margin-top: auto;
+    }
+    main {
+        margin-bottom: 120px;
+    }
+    .footer-container {
+        max-width: 1800px;
     }
 }
 @media (max-width: 1397px) {
