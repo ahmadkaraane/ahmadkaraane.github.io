@@ -211,3 +211,15 @@ for (let i = 0; i < members.length; i++) {
   );
   memberImage[i].appendChild(memberBody);
 }
+
+
+let footerCont = document.querySelector(".footer-container");
+
+function footerWidth() {
+  footerCont.style.width = window
+    .getComputedStyle(document.querySelector("body"))
+    .getPropertyValue("width");
+}
+
+window.addEventListener("resize", footerWidth);
+window.addEventListener("load", footerWidth);
