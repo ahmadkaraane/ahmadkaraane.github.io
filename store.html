@@ -18,81 +18,105 @@
 
 
     <div class="overlay"></div>
-    <header>
-        <div class="copy-popup">
-            <i class="fa fa-check" aria-hidden="true"></i>
-            <p>IP Was Copied</p>
-        </div>
-        <canvas id="particle-canvas"></canvas>
-        <nav>
-            <div class="container">
-                <ul class="navbar">
-                    <li><a href="index.html"> <i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="#" class="active"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
-                    <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
-                    <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
-                    <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
-                </ul>
-                <div class="toggle">
-                    <i class="fa fa-bars toggler"></i>
-                    <!-- Uncomment this if you wanna use image -->
-                    <!-- <div class="logo">
-                        <img src="images/logo.png" alt="logo" draggable="false">
-                    </div> -->
-                    <p>Sentry Craft</p>
-                </div>
-                <div class="mobile-nav">
-                    <div class="closer">
-                        <i class="fa-solid fa-xmark"></i>
-                    </div>
-                    <ul class="navbar mobile-navbar">
+    <div class="body-content">
+        <header>
+            <div class="copy-popup">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <p>IP Was Copied</p>
+            </div>
+            <canvas id="particle-canvas"></canvas>
+            <nav>
+                <div class="container">
+                    <ul class="navbar">
                         <li><a href="index.html"> <i class="fa-solid fa-house"></i> Home</a></li>
                         <li><a href="#" class="active"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
                         <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
                         <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
                         <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
-                </ul>
+                    </ul>
+                    <div class="toggle">
+                        <i class="fa fa-bars toggler"></i>
+                        <!-- Uncomment this if you wanna use image -->
+                        <!-- <div class="logo">
+                            <img src="images/logo.png" alt="logo" draggable="false">
+                        </div> -->
+                        <p>Sentry Craft</p>
+                    </div>
+                    <div class="mobile-nav">
+                        <div class="closer">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <ul class="navbar mobile-navbar">
+                            <li><a href="index.html"> <i class="fa-solid fa-house"></i> Home</a></li>
+                            <li><a href="#" class="active"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
+                            <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
+                            <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
+                            <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-logo logo-animation">
+                        <img src="images/logo.png" alt="logo" draggable="false">
+                    </div>
+                </div>
+                <div class="servers-info">
+                    <div class="discord-info server-info ip">
+                        <div class="icon"><i class="fa-brands fa-discord"></i></div>
+                        <div class="server-text">
+                            <p class="discord-online"><span>20</span> Player Online</p>
+                            <p><a href="#">Click To Join</a></p>
+                        </div>
+                    </div>
+                    <div class="mc-info server-info">
+                        <div class="icon"><i class="fa-solid fa-circle-play"></i></div>
+                        <div class="server-text">
+                            <p class="mc-online"><span>20</span> Player Online</p>
+                            <p><a href="#">Click To Join</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-        <div class="hero">
+        </header>
+        <main>
             <div class="container">
-                <div class="hero-logo logo-animation">
-                    <img src="images/logo.png" alt="logo" draggable="false">
+                <div class="section-title">
+                    <h3>Store</h3>
                 </div>
-            </div>
-            <div class="servers-info">
-                <div class="discord-info server-info ip">
-                    <div class="icon"><i class="fa-brands fa-discord"></i></div>
-                    <div class="server-text">
-                        <p class="discord-online"><span>20</span> Player Online</p>
-                        <p><a href="#">Click To Join</a></p>
-                    </div>
-                </div>
-                <div class="mc-info server-info">
-                    <div class="icon"><i class="fa-solid fa-circle-play"></i></div>
-                    <div class="server-text">
-                        <p class="mc-online"><span>20</span> Player Online</p>
-                        <p><a href="#">Click To Join</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="section-title">
-                <h3>Store</h3>
-            </div>
-            <div class="store">
-                <div class="store-content">
-                    <div class="side-one">
-                        <div class="store-categories">
-                            <div class="title">
+                <div class="store">
+                    <div class="store-content">
+                        <div class="side-one">
+                            <div class="store-categories">
+                                <div class="title">
+                                    <h3>Categories</h3>
+                                </div>
+                                <div class="store-lists">
+                                    <ul>
+                                        <li class="home store-nav active-nav">Home</li>
+                                        <li class="ranks store-nav">Ranks</li>
+                                        <li class="gems store-nav">gems</li>
+                                        <li class="crates store-nav">Crates</li>
+                                        <!-- Add more here -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="recent-customers">
+                                <div class="title">
+                                    <h3>Recent Customers</h3>
+                                </div>
+                                <div class="customer-heads">
+    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-store store-categories">
+                            <div class="mobile-store-title title">
                                 <h3>Categories</h3>
                             </div>
                             <div class="store-lists">
-                                <ul>
+                                <ul class="mobile-cates">
                                     <li class="home store-nav active-nav">Home</li>
                                     <li class="ranks store-nav">Ranks</li>
                                     <li class="gems store-nav">gems</li>
@@ -101,269 +125,247 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="recent-customers">
-                            <div class="title">
-                                <h3>Recent Customers</h3>
+    
+                        <div class="stores">
+                            <div class="store-info home-items">
+                                <div class="title">
+                                    <h3>SentryCraft</h3>
+                                </div>
+                                <div class="content">
+                                    <h3 class="intro-title title">Welcome</h3>
+                                    <p class="store-intro">
+                                        Welcome to the exclusive SentryCraft Store! To embark on your shopping journey,
+                                        simply choose a category from the convenient sidebar. It's worth mentioning that our
+                                        ranks come with a one-time fee and grant you permanent access!
+                                    </p>
+                                    <h3 class="help-title title">Need Help?</h3>
+                                    <p class="store-help">Explore our Minecraft store's vast selection of in-game treasures,
+                                        suitable for both seasoned adventurers and beginners. Join our Discord community for
+                                        assistance and camaraderie today!</p>
+                                    <h3 class="refund-title title">Redund Policy</h3>
+                                    <p class="store-refund">Please note that our refund policy is uncompromising, and we
+                                        regret to inform you that all purchases are non-refundable. Your Minecraft treasures
+                                        are yours to keep, and we appreciate your understanding in this matter. If you have
+                                        any questions or concerns, please don't hesitate to reach out to our support team
+                                        for further assistance.</p>
+                                </div>
                             </div>
-                            <div class="customer-heads">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mobile-store store-categories">
-                        <div class="mobile-store-title title">
-                            <h3>Categories</h3>
-                        </div>
-                        <div class="store-lists">
-                            <ul class="mobile-cates">
-                                <li class="home store-nav active-nav">Home</li>
-                                <li class="ranks store-nav">Ranks</li>
-                                <li class="gems store-nav">gems</li>
-                                <li class="crates store-nav">Crates</li>
-                                <!-- Add more here -->
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="stores">
-                        <div class="store-info home-items">
-                            <div class="title">
-                                <h3>SentryCraft</h3>
-                            </div>
-                            <div class="content">
-                                <h3 class="intro-title title">Welcome</h3>
-                                <p class="store-intro">
-                                    Welcome to the exclusive SentryCraft Store! To embark on your shopping journey,
-                                    simply choose a category from the convenient sidebar. It's worth mentioning that our
-                                    ranks come with a one-time fee and grant you permanent access!
-                                </p>
-                                <h3 class="help-title title">Need Help?</h3>
-                                <p class="store-help">Explore our Minecraft store's vast selection of in-game treasures,
-                                    suitable for both seasoned adventurers and beginners. Join our Discord community for
-                                    assistance and camaraderie today!</p>
-                                <h3 class="refund-title title">Redund Policy</h3>
-                                <p class="store-refund">Please note that our refund policy is uncompromising, and we
-                                    regret to inform you that all purchases are non-refundable. Your Minecraft treasures
-                                    are yours to keep, and we appreciate your understanding in this matter. If you have
-                                    any questions or concerns, please don't hesitate to reach out to our support team
-                                    for further assistance.</p>
-                            </div>
-                        </div>
-                        <div class="store-items ranks-items hidden">
-                            <div class="title">
-                                <h3>Ranks</h3>
-                            </div>
-                            <div class="content">
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/ranks.png" alt="ranks" draggable="false">
+                            <div class="store-items ranks-items hidden">
+                                <div class="title">
+                                    <h3>Ranks</h3>
+                                </div>
+                                <div class="content">
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/ranks.png" alt="ranks" draggable="false">
+                                        </div>
+                                            <div class="item-text">
+                                            <div class="item-name">Blue Gold Rank</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/ranks.png" alt="ranks" draggable="false">
+                                        </div>
                                         <div class="item-text">
-                                        <div class="item-name">Blue Gold Rank</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                            <div class="item-name">Blue Gold Rank</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/ranks.png" alt="ranks" draggable="false">
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/ranks.png" alt="ranks" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Blue Gold Rank</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Blue Gold Rank</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/ranks.png" alt="ranks" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Blue Gold Rank</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/ranks.png" alt="ranks" draggable="false">
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/ranks.png" alt="ranks" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Blue Gold Rank</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Blue Gold Rank</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/ranks.png" alt="ranks" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Blue Gold Rank</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/ranks.png" alt="ranks" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Blue Gold Rank</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/ranks.png" alt="ranks" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Blue Gold Rank</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/ranks.png" alt="ranks" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Blue Gold Rank</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="store-items gems-items hidden">
-                            <div class="title">
-                                <h3>Gems</h3>
+                            <div class="store-items gems-items hidden">
+                                <div class="title">
+                                    <h3>Gems</h3>
+                                </div>
+                                <div class="content">
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/gems.png" alt="gems" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Green Gem Bag</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/gems.png" alt="gems" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Green Gem Bag</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/gems.png" alt="gems" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Green Gem Bag</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/gems.png" alt="gems" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Green Gem Bag</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/gems.png" alt="gems" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Green Gem Bag</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/gems.png" alt="gems" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Green Gem Bag</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="content">
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/gems.png" alt="gems" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Green Gem Bag</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
+                            <div class="store-items crates-items hidden">
+                                <div class="title">
+                                    <h3>Crates</h3>
                                 </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/gems.png" alt="gems" draggable="false">
+                                <div class="content">
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/crates.png" alt="crates" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Loot Box</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Green Gem Bag</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/crates.png" alt="crates" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Loot Box</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/gems.png" alt="gems" draggable="false">
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/crates.png" alt="crates" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Loot Box</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Green Gem Bag</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/crates.png" alt="crates" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Loot Box</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/gems.png" alt="gems" draggable="false">
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/crates.png" alt="crates" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Loot Box</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Green Gem Bag</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/gems.png" alt="gems" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Green Gem Bag</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/gems.png" alt="gems" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Green Gem Bag</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="store-items crates-items hidden">
-                            <div class="title">
-                                <h3>Crates</h3>
-                            </div>
-                            <div class="content">
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/crates.png" alt="crates" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Loot Box</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/crates.png" alt="crates" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Loot Box</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/crates.png" alt="crates" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Loot Box</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/crates.png" alt="crates" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Loot Box</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/crates.png" alt="crates" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Loot Box</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="item-img">
-                                        <img src="images/crates.png" alt="crates" draggable="false">
-                                    </div>
-                                    <div class="item-text">
-                                        <div class="item-name">Loot Box</div>
-                                        <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
-                                        <div class="button"><a href="#">Buy</a></div>
-                                        <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                    <div class="item">
+                                        <div class="item-img">
+                                            <img src="images/crates.png" alt="crates" draggable="false">
+                                        </div>
+                                        <div class="item-text">
+                                            <div class="item-name">Loot Box</div>
+                                            <div class="price-parent"> <p class="price-dlt">1.99</p> <p class="price">$5.77</p></div>
+                                            <div class="button"><a href="#">Buy</a></div>
+                                            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error asperiores illum, odit inventore cumque aperiam fuga ab corporis fugit non dolor voluptatibus tempora libero temporibus. Dicta ex porro in?</div> <!-- Item Description Wont Appear unltil u click on the item -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -371,44 +373,46 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <div class="play-now footer-start footer-section">
-            <div class="footer-section-title">
-                <h2>Play Now</h2>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="play-now footer-start footer-section">
+                    <div class="footer-section-title">
+                        <h2>Play Now</h2>
+                    </div>
+                    <div class="play-now-desc">
+                        <p>Embark on your Minecraft adventure today! Join our server and start crafting, building, and exploring with players from around the world.</p>
+                    </div>
+                    <div class="server-footer-ip ip">
+                        <p>mc.sentrycraft.net <i class="fa-solid fa-gamepad"></i></p>
+                    </div>
+                </div>
+                <div class="links footer-middle footer-section">
+                    <div class="footer-section-title">
+                        <h2>Links</h2>
+                    </div>
+                    <div class="footer-links-content">
+                        <ul>
+                            <li><a href="index.html" class="active"> <i class="fa-solid fa-house"></i> Home</a></li>
+                            <li><a href="store.html"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
+                            <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
+                            <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
+                            <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="community footer-end footer-section">
+                    <div class="footer-section-title">
+                        <h2>Join Us</h2>
+                    </div>
+                    <div class="join-us-desc">
+                        <p>Join us on Discord and become a part of our vibrant community. Connect with like-minded individuals, share experiences, and engage in exciting discussions.</p>
+                    </div>
+                    <div class="button"><a href="#"><i class="fa-brands fa-discord"></i>Join Us</a></div>
+                </div>
             </div>
-            <div class="play-now-desc">
-                <p>Embark on your Minecraft adventure today! Join our server and start crafting, building, and exploring with players from around the world.</p>
-            </div>
-            <div class="server-footer-ip ip">
-                <p>mc.sentrycraft.net <i class="fa-solid fa-gamepad"></i></p>
-            </div>
-        </div>
-        <div class="links footer-middle footer-section">
-            <div class="footer-section-title">
-                <h2>Links</h2>
-            </div>
-            <div class="footer-links-content">
-                <ul>
-                    <li><a href="index.html" class="active"> <i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="store.html"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
-                    <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
-                    <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
-                    <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="community footer-end footer-section">
-            <div class="footer-section-title">
-                <h2>Join Us</h2>
-            </div>
-            <div class="join-us-desc">
-                <p>Join us on Discord and become a part of our vibrant community. Connect with like-minded individuals, share experiences, and engage in exciting discussions.</p>
-            </div>
-            <div class="button"><a href="#"><i class="fa-brands fa-discord"></i>Join Us</a></div>
-        </div>
-    </footer>
+        </footer>
+    </div>
     <!-- <script src="JS/all.min.js"></script> -->
     <script src="JS/animation.js"></script>
     <script src="JS/main.js"></script>
