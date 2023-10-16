@@ -331,7 +331,6 @@ footer {
     gap: 20px;
     position: relative;
     left: 50%;
-    border: 1px solid red;
 }
 .play-now-desc p, .join-us-desc p {
     line-height: 150%;
