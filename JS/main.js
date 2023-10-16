@@ -180,8 +180,6 @@ function updateScrollIndicators() {
       const containerHeight = container.offsetHeight;
       const windowHeight = window.innerHeight;
       const scrollY = window.scrollY;
-      console.log(containerTop);
-      console.log(windowHeight);
       // Calculate the scroll indicator position based on container visibility
       const maxTop = 100 - (30 / window.innerHeight) * 100; // Calculate the maximum value
       const topPosition = `${Math.min(
