@@ -212,7 +212,6 @@ for (let i = 0; i < members.length; i++) {
   memberImage[i].appendChild(memberBody);
 }
 
-
 let footerCont = document.querySelector(".footer-container");
 
 function footerWidth() {
@@ -223,3 +222,10 @@ function footerWidth() {
 
 window.addEventListener("resize", footerWidth);
 window.addEventListener("load", footerWidth);
+
+let signUpBtn = document.querySelector(".signup-btn");
+if (signUpBtn) {
+  signUpBtn.addEventListener("click", () => {
+    window.location.href = "/signup.html";
+  });
+}
