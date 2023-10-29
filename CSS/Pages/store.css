@@ -186,6 +186,7 @@ main {
     background-clip: text;
 }
 .stores {
+    z-index: 0;
     width: 80%;
     background-color: var(--background-light);
     border-radius: 12px;
@@ -225,6 +226,7 @@ main {
     border-radius: 12px;
     padding: 22px;
     background-color: var(--background);
+    position: relative;
 }
 .item-img {
     width: 70%;
@@ -242,8 +244,11 @@ main {
     width: 100%;
     /* filter: saturate(80%); */
 }
-.item:hover, .item-img:hover {
+.item-img:hover {
     background-color: var(--overlay);
+    border: 1px solid var(--primary);
+}
+.item:hover {
     border: 1px solid var(--primary);
 }
 .item-big:hover {
@@ -349,6 +354,22 @@ main {
     background-color: var(--overlay);
     width: 100%;
     height: 100%;
+}
+.item::after {
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    content: "";
+    background: linear-gradient(-45deg, var(--primary), var(--secondary));
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(30px);
+    opacity: 0;
+}
+.item:hover::after {
+    opacity: 1
 }
 @keyframes item-popup {
     to {
@@ -456,4 +477,4 @@ main {
         max-width: 300px;
         min-width: 100%;
     }
-}
+}   
