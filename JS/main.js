@@ -14,20 +14,34 @@ const config = {
 
 const discordOnline = document.querySelector(".discord-online");
 const minecraftOnline = document.querySelector(".mc-online");
-// Get the header element's computed height
 const bgi = document.querySelector(".bgi");
 const color = document.querySelector(".color");
 const headerH = document.querySelector("header"); // Replace "header" with the actual selector for your header element
 
 if (bgi && color && headerH) {
-  const headerStyles = getComputedStyle(headerH);
-  const headerHeightWithPadding =
-    headerH.offsetHeight +
-    parseFloat(headerStyles.paddingTop) +
-    parseFloat(headerStyles.paddingBottom);
+  // Define a callback function to log the computed value after any dynamic changes
+  function logComputedValue() {
+    const headerStyles = getComputedStyle(headerH);
+    const headerHeightWithPadding =
+      headerH.offsetHeight +
+      parseFloat(headerStyles.paddingTop) +
+      parseFloat(headerStyles.paddingBottom);
 
-  bgi.style.height = `${headerHeightWithPadding}px`;
-  color.style.height = `${headerHeightWithPadding}px`;
+    console.log("headerHeightWithPadding:", headerHeightWithPadding);
+
+    // You can also remove the event listener if needed.
+    headerH.removeEventListener("transitionend", logComputedValue);
+  }
+
+  // Add an event listener for transitions (or the relevant event) to trigger the callback
+  headerH.addEventListener("transitionend", logComputedValue);
+
+  // You may also want to trigger the event if you know when the dynamic changes occur.
+  // headerH.classList.add("some-class-that-triggers-transition");
+
+  // Set initial heights as before
+  bgi.style.height = `${headerH.offsetHeight}px`;
+  color.style.height = `${headerH.offsetHeight}px`;
 }
 
 let toggler = document.querySelector(".toggler");
