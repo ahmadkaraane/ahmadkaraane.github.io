@@ -2,6 +2,7 @@
     --text-light: #ffffff90;
     --text: #d4d4d4;
     --background: #0f0f0f; /* Dark gray background */
+    --background-overlay: #0f0f0f99;
     --background-light: #1a1a1a; /* Slightly lighter gray background */
     --background-lighter: #232323; /* Even lighter gray background */
     --background-img: #24242450; /* Grayish background with reduced opacity */
