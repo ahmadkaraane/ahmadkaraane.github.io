@@ -65,12 +65,13 @@ body {
     /* overflow: visible; */
     font-family: Rubik;
     /* height: 200vh; */
-    max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
 }
-
-
+.main-container, .hero .container, .hero-logo {
+    max-width: 1600px;
+    margin: auto;
+}
 main {
     /* border: 1px solid red; */
     padding-top: 0 !important;
@@ -164,6 +165,13 @@ header {
     /* padding-bottom: 50px; */
     /* max-height: 100vh; */
 }
+.pc-nav li {
+    transform: translateY(-75px);
+    opacity: 0;
+}
+.hero-text {
+    /* transform: translateX(-110%); */
+}
 .bgi {
     left: 0%;
     position: absolute;
@@ -190,11 +198,17 @@ nav {
 .hero-logo img {
     width: 100%;
 }
-/* .button {
+.button {
+    box-shadow: 0px 0px 15px 5px var(--primary-overlay);
+}
+.button a {
+    color: var(--text);
+    padding: 12px;
+}
+.button {
     width: 160px;
     height: 50px;
-    border: 1px solid var(--primary);
-    background-color: transparent;
+    background-color: var(--primary);
     border-radius: 8px;
     margin-top: 22px;
     cursor: pointer;
@@ -204,155 +218,15 @@ nav {
     align-items: center;
     position: relative;
     outline: 0;
-}
-.button a {
-    color: var(--primary);
-    padding: 12px;
-    position: relative;
-}
-.button::before {
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    background-image: linear-gradient(-45deg, var(--primary), var(--secondary));
-    transition: all .2s ease-in-out;
-    border-radius: 8px;
-}
-.button:hover::before {
-    width: 160px;
-}  
-.button:hover a {
-    color: var(--text-light);
-} */
-.button a {
-    color: var(--text);
-    transition: color .3s ease;
-}
-.button {
-    width: 150px;
-    height: 45px;
-    margin-top: 22px;
-    --border-color: linear-gradient(-45deg, var(--primary), var(--secondary), var(--accent));
-    --border-width: .125em;
-    --curve-size: .5em;
-    --blur: 30px;
-    --bg: var(--background);
-    
-        /* use position: relative; so that BG is only for .button */
-    position: relative;
-    isolation: isolate;
-    display: inline-grid;
-    place-content: center;
-    padding: .5em 1.5em;
-    font-size: 17px;
     border: 0;
-    text-transform: uppercase;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
-    clip-path: polygon(
-                /* Top-left */
-                0% var(--curve-size),
-
-                var(--curve-size) 0,
-                /* top-right */
-                100% 0,
-                100% calc(100% - var(--curve-size)),
-
-                /* bottom-right 1 */
-                calc(100% - var(--curve-size)) 100%,
-                /* bottom-right 2 */
-                0 100%);
-    transition: color 250ms;
 }
-
-.button::after,
-.button::before {
-    content: '';
-    position: absolute;
-    inset: 0;
+.button:hover {
+    border: 1px solid var(--primary);
+    background-color: transparent;
 }
-
-.button::before {
-    background: var(--border-color);
-    background-size: 300% 300%;
-    animation: move-bg7234 5s ease infinite;
-    z-index: -2;
+.button:hover a {
+    color: var(--primary);
 }
-
-@keyframes move-bg7234 {
-    0% {
-        background-position: 31% 0%
-    }
-
-    50% {
-        background-position: 70% 100%
-    }
-
-    100% {
-        background-position: 31% 0%
-    }
-}
-
-.button::after {
-    background: var(--bg);
-    z-index: -1;
-    clip-path: polygon(
-                /* Top-left */
-                var(--border-width) 
-                calc(var(--curve-size) + var(--border-width) * .5),
-
-                calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
-
-                /* top-right */
-                calc(100% - var(--border-width)) 
-                var(--border-width),
-
-                calc(100% - var(--border-width)) 
-                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
-
-                /* bottom-right 1 */
-                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
-                /* bottom-right 2 */
-                var(--border-width) calc(100% - var(--border-width)));
-    transition: clip-path 500ms;
-}
-
-.button:where(:hover, :focus)::after {
-    clip-path: polygon(
-                    /* Top-left */
-                    calc(100% - var(--border-width)) 
-
-                    calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-        
-                    calc(100% - var(--border-width))
-
-                    var(--border-width),
-        
-                    /* top-right */
-                    calc(100% - var(--border-width))
-
-                    var(--border-width),
-        
-                    calc(100% - var(--border-width)) 
-
-                    calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
-        
-                    /* bottom-right 1 */
-                    calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
-                    calc(100% - var(--border-width)),
-
-                    /* bottom-right 2 */
-                    calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
-                    calc(100% - var(--border-width)));
-    transition: 200ms;
-}
-
-.button:where(:hover, :focus) a{
-    color: var(--background);
-}
-
 
 .navbar {
     display: flex;
@@ -411,6 +285,9 @@ nav {
 .toggle i:hover {
     color: var(--text);
 }
+.logo-animation {
+    animation: logo 2s infinite ease-in-out alternate;
+}
 .logo {
     width: 12%;
 }
@@ -453,6 +330,7 @@ nav {
     cursor: pointer;
     position: relative;
 }
+
 .servers-info i {
     color: var(--accent);
 }
@@ -499,9 +377,6 @@ nav {
     border-radius: 24px;
     box-shadow: 0px 0px 5px 2px var(--primary-light);
 }
-.logo-animation {
-    animation: logo 2s infinite ease-in-out alternate;
-}
 .body-content {
     display: flex;
     flex-direction: column;
@@ -510,15 +385,15 @@ nav {
 }
 footer {
     background-color: var(--background-light);
-    width: 200vw;
-    transform: translateX(-50%);
+    width: 100vw;
+    /* transform: translateX(-50%); */
 }
 .footer-container {
     padding: 50px var(--side-padding);
     display: flex;
     gap: 20px;
     position: relative;
-    left: 50%;
+    /* left: 50%; */
 }
 .play-now-desc p, .join-us-desc p {
     line-height: 150%;
@@ -582,6 +457,19 @@ footer h2 {
         transform: translateY(-10%);
     }
 }
+@keyframes hero-in {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes pc-nav {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @keyframes copy-hide {
     to {
         transform: translateX(-250px);
@@ -589,17 +477,33 @@ footer h2 {
     }
 }
 @media (min-width: 1800px) {
+
+    .hero-logo img{
+        /* width: 50%;
+        margin: auto;
+        display: block; */
+    }
     footer {
-        margin-top: auto;
+        /* margin-top: auto; */
     }
     main {
         margin-bottom: 120px;
     }
     .footer-container {
         max-width: 1800px;
+        margin: auto;
     }
 }
-@media (max-width: 1397px) {
+@media (min-width: 1274px) {
+    .hero-logo img {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+@media (max-width: 1304px) and (min-width: 1191px) {
+    .navbar {
+        gap: 50px;
+    }
 }
 @media (max-width: 1272px) {
     .hero-logo {
@@ -609,6 +513,17 @@ footer h2 {
 @media (max-width: 1190px) {
     .navbar {
         gap: 45px;
+    }
+}
+@media (max-width: 1153px) {
+    .navbar {
+        gap: 30px;
+    }
+}
+@media (max-width: 1078px) {
+    .navbar {
+        justify-content: space-between;
+        gap: unset;
     }
 }
 @media (max-width: 1030px) {
@@ -680,10 +595,43 @@ footer h2 {
         text-align: center;
     }
 }
+@media (min-width: 421px) {
+    .servers-info > * {
+        opacity: 0;
+        transform: translateY(100%);
+        animation: servers-in 2.5s ease forwards;
+    }
+    @keyframes servers-in  {
+        80% {
+            transform: translateY(0);
+            opacity: .8;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+} 
 @media (max-width: 420px) {
     .servers-info {
         flex-direction: column;
         gap: 20px;
         align-items: center;
+    }
+    .servers-info > *:nth-child(even) {
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: servers-in 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    }
+    .servers-info > *:nth-child(odd) {
+        opacity: 0;
+        transform: translateX(100%);
+        animation: servers-in 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    }
+    @keyframes servers-in  {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 }
