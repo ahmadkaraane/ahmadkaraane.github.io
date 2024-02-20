@@ -14,38 +14,63 @@
     <header>
         <canvas id="particle-canvas"></canvas>
     </header>
-    <div class="back">
+    <div class="back-button">
         <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back</a>
     </div>
     <form action="">
-        <div class="input-wrapper">
-            <input type="text" name="mc-user" id="mc-user" placeholder=" " class="text-inp">
-            <label for="mc-user" class="text-inp-lbl">Minecraft Username</label>
-            <div class="line"></div>
-        </div>
-        <div class="input-wrapper">
-            <input type="email" name="email" id="email" placeholder=" " class="text-inp">
-            <label for="email" class="text-inp-lbl">Email</label>
-            <div class="line"></div>
-        </div>
-        <div class="input-wrapper">
-            <input type="password" name="pass" id="pass" placeholder=" " class="text-inp">
-            <label for="pass" class="text-inp-lbl">Password</label>
-            <div class="line"></div>
-        </div>
-        <div class="input-wrapper">
-            <input type="password" name="pass-con" id="pass-con" placeholder=" " class="text-inp">
-            <label for="pass-con" class="text-inp-lbl">Confirm Password</label>
-            <div class="line"></div>
-        </div>
-        <div class="submit"><button class="button"><a href="#">Sign Up</a></button></div>
-
-        <a href="login.html" class="switch-link">Log In Instead</a>
-
-        <div class="check-wrapper">
-            <input type="checkbox" name="policy" id="policy" class="form-checkbox">
-            <span class="checkmark"></span>
-            <label for="policy" class="policy-lbl">I agree to the <a href="#">terms of service</a></label>
+        <div class="card">
+            <div class="front">
+                <div class="input-wrapper">
+                    <input type="text" name="mc-user" id="mc-user" placeholder=" " class="text-inp">
+                    <label for="mc-user" class="text-inp-lbl">Minecraft Username</label>
+                    <div class="line"></div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" name="email" id="email" placeholder=" " class="text-inp">
+                    <label for="email" class="text-inp-lbl">Email</label>
+                    <div class="line"></div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" name="pass" id="pass" placeholder=" " class="text-inp">
+                    <label for="pass" class="text-inp-lbl">Password</label>
+                    <div class="line"></div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" name="pass-con" id="pass-con" placeholder=" " class="text-inp">
+                    <label for="pass-con" class="text-inp-lbl">Confirm Password</label>
+                    <div class="line"></div>
+                </div>
+                <div class="submit"><button class="button"><a href="#">Sign Up</a></button></div>
+        
+                <a  class="switch-link">Log In Instead</a>
+        
+                <div class="check-wrapper">
+                    <input type="checkbox" name="policy" id="policy" class="form-checkbox">
+                    <span class="checkmark"></span>
+                    <label for="policy" class="policy-lbl">I agree to the <a href="#">terms of service</a></label>
+                </div>
+            </div>
+            <div class="back">
+                <div class="input-wrapper">
+                    <input type="text" name="mc-user" id="mc-user" placeholder=" " class="text-inp">
+                    <label for="mc-user" class="text-inp-lbl">Email Or Minecraft Username</label>
+                    <div class="line"></div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" name="email" id="email" placeholder=" " class="text-inp">
+                    <label for="email" class="text-inp-lbl">Email</label>
+                    <div class="line"></div>
+                </div>
+                <div class="submit"><button class="button"><a href="#">Log In</a></button></div>
+        
+                <a class="switch-link">Sign Up Instead</a>
+        
+                <div class="check-wrapper">
+                    <input type="checkbox" name="policy" id="rmmbr" class="form-checkbox">
+                    <span class="checkmark"></span>
+                    <label for="rmmbr" class="rmmbr-lbl">Remember me</label>
+                </div>
+            </div>
         </div>
     </form>
     <script src="JS/auth.js"></script>

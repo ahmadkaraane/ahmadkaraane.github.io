@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="CSS/global.css">
     <title>Home | SentryCraft</title>
 </head>
-<body>
-    <div class="bgi"></div>
-    <div class="color"></div>
+<body inmaintabuse="1" cz-shortcut-listen="true">
+    <div class="bgi" style="height: 593px;"></div>
+    <div class="color" style="height: 593px;"></div>
     
     
     <div class="overlay"></div>
@@ -22,18 +22,20 @@
                 <i class="fa fa-check" aria-hidden="true"></i>
                 <p>IP Was Copied</p>
             </div>
-            <canvas id="particle-canvas"></canvas>
+            <canvas id="particle-canvas" width="1604" height="593"></canvas>
             <nav>
                 <div class="container">
-                    <ul class="navbar">
-                        <li><a href="#" class="active"> <i class="fa-solid fa-house"></i> Home</a></li>
-                        <li><a href="store.html"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
-                        <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
-                        <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
-                        <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
+                    <ul class="navbar pc-nav">
+                        <li><a href="#" class="active"> <i class="fa-solid fa-house" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="store.html"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Store</a></li>
+                        <li><a href="rules.html"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Rules</a></li>
+                        <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake" aria-hidden="true"></i> Staff Applicaiton</a></li>
+                        <li><a href="staff-members.html"><i class="fa-solid fa-users-rays" aria-hidden="true"></i> Staff Members</a></li>
+                        <li><a href="contact-us.html"><i class="fa-solid fa-question"></i> Contact Us</a></li>
+                        
                     </ul>
                     <div class="toggle">
-                        <i class="fa fa-bars toggler"></i>
+                        <i class="fa fa-bars toggler" aria-hidden="true"></i>
                         <!-- Uncomment this if you wanna use image -->
                         <!-- <div class="logo">
                             <img src="images/logo.png" alt="logo" draggable="false">
@@ -42,15 +44,16 @@
                     </div>
                     <div class="mobile-nav">
                         <div class="closer">
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                         </div>
                         <ul class="navbar mobile-navbar">
-                            <li><a href="#" class="active"> <i class="fa-solid fa-house"></i> Home</a></li>
-                            <li><a href="store.html"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
-                            <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
-                            <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
-                            <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
-                        </ul>
+                            <li><a href="#" class="active"> <i class="fa-solid fa-house" aria-hidden="true"></i> Home</a></li>
+                            <li><a href="store.html"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Store</a></li>
+                            <li><a href="rules.html"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Rules</a></li>
+                            <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake" aria-hidden="true"></i> Staff Applicaiton</a></li>
+                            <li><a href="staff-members.html"><i class="fa-solid fa-users-rays" aria-hidden="true"></i> Staff Members</a></li>
+                            <li><a href="contact-us.html"><i class="fa-solid fa-question"></i> Contact Us</a></li>
+                    </ul>
                     </div>
                 </div>
             </nav>
@@ -69,16 +72,16 @@
                 </div>
                 <div class="servers-info">
                     <div class="discord-info server-info">
-                        <div class="icon"><i class="fa-brands fa-discord"></i></div>
+                        <div class="icon"><i class="fa-brands fa-discord" aria-hidden="true"></i></div>
                         <div class="server-text">
-                            <p class="discord-online"></p>
+                            <p class="discord-online">13 Members Online</p>
                             <p><a href="#">Click To Join</a></p>
                         </div>
                     </div>
                     <div class="mc-info server-info ip">
-                        <div class="icon"><i class="fa-solid fa-circle-play"></i></div>
+                        <div class="icon"><i class="fa-solid fa-circle-play" aria-hidden="true"></i></div>
                         <div class="server-text">
-                            <p class="mc-online"></p>
+                            <p class="mc-online">Server Is Offline</p>
                             <p><a href="#">Click To Join</a></p>
                         </div>
                     </div>
@@ -87,61 +90,128 @@
         </header>
     
         <main>
-            <section class="section-one section">
-                <div class="section-video">
-                    <video src="videos/home-welcome.mp4" controls></video>
-                </div>
-            </section>
-            <section class="section-two section">
-                <div class="section-title">
-                    <h3>Friendly</h3>
-                </div>
-                <div class="section-content">
-                    <div class="scroll-indicator"></div>
-                    <div class="section-text">
-                        <p>Welcome to our Minecraft server, where the spirit of friendly gaming and teamwork thrives. Our community is dedicated to creating a space where players of all skill levels can come together to forge alliances, embark on grand adventures, and build incredible worlds. Join us in the pursuit of camaraderie and shared creativity as we craft unforgettable experiences in the blocky realms of Minecraft.</p>
+            <div class="main-container">
+                <section class="section-one section">
+                    <div class="section-title">
+                        <h3>Friendly</h3>
                     </div>
-                    <div class="section-img">
-                        <img src="images/section1.jpg" alt="team Up" draggable="false">
+                    <div class="section-content">
+                        <div class="scroll-indicator"></div>
+                        <div class="section-text">
+                            <p>Welcome to our Minecraft server, where the spirit of friendly gaming and teamwork thrives. Our community is dedicated to creating a space where players of all skill levels can come together to forge alliances, embark on grand adventures, and build incredible worlds. Join us in the pursuit of camaraderie and shared creativity as we craft unforgettable experiences in the blocky realms of Minecraft.</p>
+                        </div>
+                        <div class="section-img">
+                            <img src="images/section1.jpg" alt="team Up" draggable="false">
+                        </div>
+                    </div>
+                </section>
+                <section class="section-two section even">
+                    <div class="section-title">
+                        <h3>Explorative</h3>
+                    </div>
+                    <div class="section-content">
+                        <div class="scroll-indicator" style="top: 0%;"></div>
+        
+                        <div class="section-text">
+                            <p>Explore uncharted lands and embark on epic quests in our Minecraft world. Venture into mysterious dungeons, discover hidden treasures, and conquer formidable challenges. With a sense of adventure, every corner of our server offers excitement and surprises.</p>
+                        </div>
+                        <div class="section-img">
+                            <img src="images/section1.jpg" alt="Explorative" draggable="false">
+                        </div>
+                    </div>
+                </section>
+                <!-- 
+                <section class="section-three section">
+                    <div class="section-title">
+                        <h3>Creative</h3>
+                    </div>
+                    <div class="section-content">
+                        <div class="scroll-indicator" style="top: 0%;"></div>
+        
+                        <div class="section-text">
+                            <p>Unleash your creativity in our Minecraft universe. Build magnificent structures, design intricate redstone contraptions, and shape the world according to your imagination. Whether you're an aspiring architect or a redstone genius, our server provides the canvas for your artistic expression.</p>
+                        </div>
+                        <div class="section-img">
+                            <img src="images/section1.jpg" alt="Creative" draggable="false">
+                        </div>
+                    </div>
+                </section> -->
+                
+                <section class="section-four section">
+                    <div class="section-video">
+                        <video src="videos/home-welcome.mp4" controls=""></video>
+                    </div>
+                </section>
+                <div class="faq section">
+                    <div class="section-title">
+                        <h3>FAQ</h3>
+                    </div>
+                    <div class="content">
+                        <div class="faq-item">
+                            <div class="faq-title">
+                                How do I join the Minecraft server?
+                            </div>
+                            <div class="faq-desc">
+                                Placeholder answer for joining the server.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-title">
+                                What rules should I be aware of on the server?
+                            </div>
+                            <div class="faq-desc">
+                                Placeholder information about server rules.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-title">
+                                Are there specific building guidelines?
+                            </div>
+                            <div class="faq-desc">
+                                Placeholder guidelines for building on the server.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-title">
+                                Can I invite friends to the server?
+                            </div>
+                            <div class="faq-desc">
+                                Placeholder information about inviting friends.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-title">
+                                How can I report bugs or issues?
+                            </div>
+                            <div class="faq-desc">
+                                Placeholder instructions for reporting bugs.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-title">
+                                Is there a penalty for cheating?
+                            </div>
+                            <div class="faq-desc">
+                                Placeholder information about penalties for cheating.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-title">
+                                What happens if I get banned?
+                            </div>
+                            <div class="faq-desc">
+                                Placeholder information about ban consequences.
+                            </div>
+                        </div>
+                        <!-- Add more FAQ items as needed -->
                     </div>
                 </div>
-            </section>
-            <section class="section-three section even">
-                <div class="section-title">
-                    <h3>Explorative</h3>
-                </div>
-                <div class="section-content">
-                    <div class="scroll-indicator"></div>
-    
-                    <div class="section-text">
-                        <p>Explore uncharted lands and embark on epic quests in our Minecraft world. Venture into mysterious dungeons, discover hidden treasures, and conquer formidable challenges. With a sense of adventure, every corner of our server offers excitement and surprises.</p>
-                    </div>
-                    <div class="section-img">
-                        <img src="images/section1.jpg" alt="Explorative" draggable="false">
-                    </div>
-                </div>
-            </section>
-            <section class="section-four section">
-                <div class="section-title">
-                    <h3>Creative</h3>
-                </div>
-                <div class="section-content">
-                    <div class="scroll-indicator"></div>
-    
-                    <div class="section-text">
-                        <p>Unleash your creativity in our Minecraft universe. Build magnificent structures, design intricate redstone contraptions, and shape the world according to your imagination. Whether you're an aspiring architect or a redstone genius, our server provides the canvas for your artistic expression.</p>
-                    </div>
-                    <div class="section-img">
-                        <img src="images/section1.jpg" alt="Creative" draggable="false">
-                    </div>
-                </div>
-            </section>
-
+            </div>
         </main>
         
         
         <footer>
-            <div class="footer-container">
+            <div class="footer-container" style="width: 1600px;">
                 <div class="play-now footer-start footer-section">
                     <div class="footer-section-title">
                         <h2>Play Now</h2>
@@ -150,7 +220,7 @@
                         <p>Embark on your Minecraft adventure today! Join our server and start crafting, building, and exploring with players from around the world.</p>
                     </div>
                     <div class="server-footer-ip ip">
-                        <p>mc.sentrycraft.net <i class="fa-solid fa-gamepad"></i></p>
+                        <p>mc.sentrycraft.net <i class="fa-solid fa-gamepad" aria-hidden="true"></i></p>
                     </div>
                 </div>
                 <div class="links footer-middle footer-section">
@@ -159,11 +229,12 @@
                     </div>
                     <div class="footer-links-content">
                         <ul>
-                            <li><a href="index.html" class="active"> <i class="fa-solid fa-house"></i> Home</a></li>
-                            <li><a href="store.html"><i class="fa-solid fa-cart-shopping"></i> Store</a></li>
-                            <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
-                            <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
-                            <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
+                            <li><a href="index.html" class="active"> <i class="fa-solid fa-house" aria-hidden="true"></i> Home</a></li>
+                            <li><a href="store.html"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Store</a></li>
+                            <li><a href="rules.html"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Rules</a></li>
+                            <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake" aria-hidden="true"></i> Staff Applicaiton</a></li>
+                            <li><a href="staff-members.html"><i class="fa-solid fa-users-rays" aria-hidden="true"></i> Staff Members</a></li>
+                            <li><a href="contact-us.html"><i class="fa-solid fa-question"></i> Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -174,7 +245,7 @@
                     <div class="join-us-desc">
                         <p>Join us on Discord and become a part of our vibrant community. Connect with like-minded individuals, share experiences, and engage in exciting discussions.</p>
                     </div>
-                    <div class="button"><a href="#"><i class="fa-brands fa-discord"></i>Join Us</a></div>
+                    <div class="button"><a href="#"><i class="fa-brands fa-discord" aria-hidden="true"></i>Join Us</a></div>
                 </div>
             </div>
         </footer>
@@ -182,5 +253,28 @@
     <!-- <script src="JS/all.min.js"></script> -->
     <script src="JS/animation.js"></script>
     <script src="JS/main.js"></script>
+    <script>
+        let textExtraPixels = heroText.offsetLeft;
+
+heroText.style.transform = `translateX(calc(-100% - ${textExtraPixels}px))`;
+
+// Get the element you want to translate
+let heroLogo = document.querySelector(".hero-logo");
+
+// Calculate the extra pixels based on the difference between the window width and the sum of the element's offsetLeft and its width
+let windowWidth = window.innerWidth || document.documentElement.clientWidth;
+let logoExtraPixels =
+  windowWidth - (heroLogo.offsetLeft + heroLogo.offsetWidth);
+
+// Apply the translateX value to the element
+heroLogo.style.transform = `translateX(calc(100% + ${logoExtraPixels}px))`;
+
+console.log(logoExtraPixels);
+heroText.style.animation =
+  "hero-in 3s forwards cubic-bezier(0.68, -0.55, 0.27, 1.55)";
+heroLogo.style.animation =
+  "hero-in 3s forwards cubic-bezier(0.68, -0.55, 0.27, 1.55), logo 2s 3s infinite ease-in-out alternate";
+
+    </script>
 </body>
 </html>

@@ -32,6 +32,7 @@
                         <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
                         <li><a href="#" class="active"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
                         <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
+                        <li><a href="contact-us.html"><i class="fa-solid fa-question"></i> Contact Us</a></li>
                     </ul>
                     <div class="toggle">
                         <i class="fa fa-bars toggler"></i>
@@ -51,6 +52,7 @@
                             <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
                             <li><a href="#" class="active"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
                             <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
+                            <li><a href="contact-us.html"><i class="fa-solid fa-question"></i> Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -80,74 +82,122 @@
             </div>
             </header>
             <main>
-                <form action="" method="POST" class="staff-app"> 
-                    <input type="hidden" name="position" id="selectedPosition">
-                
-                    <div class="staff-input" error-message="Full Name must contain only letters, spaces, hyphens, and apostrophes (2-100 characters).">
-                        <label for="full-name">Full Name <span>*</span></label>
-                        <input type="text" name="full-name" id="full-name" placeholder="Ex. Mido Alawieh">
-                    </div>
-                    
-                    <div class="staff-input" error-message="Email Address is not valid.">
-                        <label for="email">Email Address <span>*</span></label>
-                        <input type="email" name="email" id="email" placeholder="Ex. mido@gmail.com">
-                    </div>
-                    
-                    <div class="staff-input" error-message="Age must be a number between 16 and 99.">
-                        <label for="age">Age <span>*</span></label>
-                        <input type="text" name="age" id="age" placeholder="Ex. 16"  >
-                    </div>
-                    <div class="staff-input" error-message="Discord username must contain between 3 and 32 characters, including letters, numbers, underscores, hyphens, and '#'">
-                        <label for="mc-username">Minecraft Username <span>*</span></label>
-                        <input type="text" name="mc-name" id="mc-username" placeholder="Ex. MidoAlawieh"  >
-                    </div>
-                    <div class="staff-input" error-message="Minecraft username must contain between 3 and 16 characters, including letters, numbers, and underscores">
-                        <label for="dc-nuserame">Discord Username <span>*</span></label>
-                        <input type="text" name="dc-name" id="dc-username" placeholder="Ex. MidoAl"  >
-                    </div>
-                    
-                    <div class="staff-input" error-message="Country must contain only letters, spaces, hyphens, and apostrophes (2-100 characters).">
-                        <label for="Country">Country <span>*</span></label>
-                        <input type="text" name="Country" id="Country" placeholder="Ex. Lebanon">
-                    </div>
-                    
-                    <div class="staff-input" error-message="Time Zone is not valid.">
-                        <label for="time-zone">Time Zone <span>*</span></label>
-                        <input type="text" name="time-zone" id="time-zone" placeholder="Ex. GMT +3">
-                    </div>
-                
-                    <div class="position-dropdown" error-message="Please select a position">
-                        <label for="position">Select your desired position</label>
-                        <div class="position">
-                        <p class="pos-title">Select... <i class="fa-solid fa-caret-down"></i></p>
-                        <div class="options">
-                            <div class="helper">Helper</div>
-                            <div class="mod">Mod</div>
-                            <div class="dev">Developer</div>
-                            <div class="admin">Admin</div>
-                            <div class="other">Other</div>  
+                <div class="main-container">
+                    <form action="" method="POST" class="staff-app chosen"> 
+                        <input type="hidden" name="position" id="selectedPosition">
+                        
+                        <div class="staff-input" error-message="Full Name must contain only letters, spaces, hyphens, and apostrophes (2-100 characters).">
+                            <label for="full-name">Full Name <span>*</span></label>
+                            <input type="text" name="full-name" id="full-name" placeholder="Ex. Mido Alawieh">
                         </div>
+                        
+                        <div class="staff-input" error-message="Email Address is not valid.">
+                            <label for="email">Email Address <span>*</span></label>
+                            <input type="email" name="email" id="email" placeholder="Ex. mido@gmail.com">
                         </div>
-                    </div>
-                
-                    <div class="staff-input" error-message="Experience should be at least 30 characters.">
-                        <label for="exp">Experience <span>*</span></label>
-                        <input type="text" name="exp" id="exp" placeholder="Ex. 2 years developer in Sentrycraft">
-                    </div>
+                        
+                        <div class="staff-input" error-message="Age must be a number between 16 and 99.">
+                            <label for="age">Age <span>*</span></label>
+                            <input type="text" name="age" id="age" placeholder="Ex. 16"  >
+                        </div>
+                        <div class="staff-input" error-message="Discord username must contain between 3 and 32 characters, including letters, numbers, underscores, hyphens, and '#'">
+                            <label for="mc-username">Minecraft Username <span>*</span></label>
+                            <input type="text" name="mc-name" id="mc-username" placeholder="Ex. MidoAlawieh"  >
+                        </div>
+                        <div class="staff-input" error-message="Minecraft username must contain between 3 and 16 characters, including letters, numbers, and underscores">
+                            <label for="dc-nuserame">Discord Username <span>*</span></label>
+                            <input type="text" name="dc-name" id="dc-username" placeholder="Ex. MidoAl"  >
+                        </div>
+                        
+                        <div class="staff-input" error-message="Country must contain only letters, spaces, hyphens, and apostrophes (2-100 characters).">
+                            <label for="Country">Country <span>*</span></label>
+                            <input type="text" name="Country" id="Country" placeholder="Ex. Lebanon">
+                        </div>
+                        
+                        <div class="staff-input" error-message="Time Zone is not valid.">
+                            <label for="time-zone">Time Zone <span>*</span></label>
+                            <input type="text" name="time-zone" id="time-zone" placeholder="Ex. GMT +3">
+                        </div>
                     
-                    <div class="staff-input" error-message="This field should be at least 30 characters.">
-                        <label for="reason">What are you applying <span>*</span></label>
-                        <input type="text" name="reason" id="reason" placeholder="Ex. Searching for a job">
-                    </div>
+                        <div class="position-dropdown" error-message="Please select a position">
+                            <label for="position">Select your desired position</label>
+                            <div class="position">
+                            <p class="pos-title">Select... <i class="fa-solid fa-caret-down"></i></p>
+                            <div class="options">
+                                <div class="helper">Helper</div>
+                                <div class="mod">Mod</div>
+                                <div class="dev">Developer</div>
+                                <div class="admin">Admin</div>
+                                <div class="builder">builder</div>
+                                <div class="content">content</div>
+                                <div class="creator">creator</div>
+                                <div class="youtuber">youtuber</div>
+                                <div class="other">Other</div>  
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <div class="staff-input dev-input hidden-input" >
+                            <label for="dev-field">What is you specialised development field? <span>*</span></label>
+                            <input type="text" name="dev-field" id="dev-field" placeholder="Ex. frontend">
+                        </div>
+                        <div class="staff-input dev-input hidden-input" >
+                            <label for="dev-skills">What are you Development skills/languages <span>*</span></label>
+                            <input type="text" name="dev-skills" id="dev-skills" placeholder="Ex. Reactjs, bootstrap">
+                        </div>
+    
+    
+                        
+                        <div class="staff-input builder-input hidden-input" >
+                            <label for="builder-field">What are you specialised in building the most? <span>*</span></label>
+                            <input type="text" name="builder-field" id="builder-field" placeholder="Ex: Castles, Worlds, etc">
+                        </div>
+    
+    
+                        <div class="staff-input content-input hidden-input" >
+                            <label for="content">What are some examples from your prev experience in development of new concepts  <span>*</span></label>
+                            <input type="text" name="content" id="content" placeholder="Ex: ...">
+                        </div>
+                        <div class="staff-input creator-input hidden-input" >
+                            <label for="creator">do you have example projects that you have already done ? <span>*</span></label>
+                            <input type="text" name="creator" id="creator" placeholder="Ex: links">
+                        </div>
+                        <div class="staff-input yt-input hidden-input" >
+                            <label for="yt-subs">how many subscribers do you have on YT or co ? <span>*</span></label>
+                            <input type="text" name="yt-subs" id="yt-subs" placeholder="Ex: 10k">
+                        </div>
+                        <div class="staff-input yt-input hidden-input" >
+                            <label for="yt-views">how many views do you have per VIdeo <span>*</span></label>
+                            <input type="text" name="yt-views" id="yt-views" placeholder="Ex: 100k">
+                        </div>
+                        <div class="staff-input youtuber-input hidden-input" >
+                            <label for="yt-agrement">would you make a video about our server ? <span>*</span></label>
+                            <input type="text" name="yt-agrement" id="yt-agrement" placeholder="Ex: 100k">
+                        </div>
+                        
+    
+    
+    
+    
+                        <div class="staff-input" error-message="Experience should be at least 30 characters.">
+                            <label for="exp">Experience <span>*</span></label>
+                            <input type="text" name="exp" id="exp" placeholder="Ex. 2 years developer in Sentrycraft">
+                        </div>
+                        
+                        <div class="staff-input" error-message="This field should be at least 30 characters.">
+                            <label for="reason">What are you applying <span>*</span></label>
+                            <input type="text" name="reason" id="reason" placeholder="Ex. Searching for a job">
+                        </div>
+                        
+                        <div class="staff-input" error-message="This field should be at least 30 characters.">
+                            <label for="good-staff">What would make you a good staff <span>*</span></label>
+                            <input type="text" name="good-staff" id="good-staff" placeholder="Ex. I am friendly..">
+                        </div>
+                        
+                        <button type="submit" class="button"><p>Submit</p></button>
+                    </form>
                     
-                    <div class="staff-input" error-message="This field should be at least 30 characters.">
-                        <label for="good-staff">What would make you a good staff <span>*</span></label>
-                        <input type="text" name="good-staff" id="good-staff" placeholder="Ex. I am friendly..">
-                    </div>
-                    
-                    <button type="submit" class="button"><p>Submit</p></button>
-                </form>
-                
+                </div>
             </main>
             <footer>
                 <div class="footer-container">
@@ -173,7 +223,8 @@
                                 <li><a href="rules.html"><i class="fa-solid fa-scale-balanced"></i> Rules</a></li>
                                 <li><a href="staff-app.html"><i class="fa-solid fa-staff-snake"></i> Staff Applicaiton</a></li>
                                 <li><a href="staff-members.html"><i class="fa-solid fa-users-rays"></i> Staff Members</a></li>
-                            </ul>
+                                <li><a href="contact-us.html"><i class="fa-solid fa-question"></i> Contact Us</a></li>
+                        </ul>
                         </div>
                     </div>
                     <div class="community footer-end footer-section">
