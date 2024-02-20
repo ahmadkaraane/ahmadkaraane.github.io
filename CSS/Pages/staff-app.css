@@ -116,3 +116,149 @@ input:focus {
     color: var(--primary);
 
 }
+
+.hidden-input {
+    display: none;
+}
+
+.dev-chosen .dev-input {
+    display: block;
+}
+@import "../variables.css";
+
+
+
+.invalid-inp{
+    position: relative;
+}
+.invalid-inp .position {
+    margin-top: 84px !important;
+}
+.invalid-inp input {
+    margin-top: 70px !important;
+}
+.invalid-inp::before {
+    position: absolute;
+    content: attr(error-message);
+    width: fit-content;
+    padding: 10px 20px;
+    color: #FF3333   ;
+    top: 30px;
+    /* border: 1px solid #FF3333 ; */
+    border-radius: 8px;
+    /* background-color: #FF333380  ; */
+}
+.position , input, .position .options * {
+    background: var(--background-light);
+    border: none;
+    padding: 20px 25px;
+    font-size: 17px;
+    color: var(--text-light);
+    outline: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.position .options * {
+    background-color: var(--background-lighter);
+}
+.selected {
+    background-color: var(--primary) !important;
+}
+.position {
+    cursor: pointer;
+    margin-bottom: 12px;
+
+}
+.position p {
+    display: flex;
+    justify-content: space-between;
+}
+.options {
+    height: 0;
+    overflow: hidden;
+    transition: height .3s ease;
+}
+.options.open {
+    /* height: auto; */
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.options.open * {
+    border-radius: 0;
+}
+.options.open *:hover {
+    background-color: var(--primary);
+}
+.position-dropdown {
+    padding-top: 12px;
+}
+.position {
+    margin-top: 12px;
+}
+
+main {
+    padding: 0px var(--side-padding);
+}
+.staff-input {
+    display: flex;
+    flex-direction: column;
+}
+/* input {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    border: 0;
+    padding: 20px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 12px;
+} */
+label {
+    color: var(--text-light);
+    padding: 12px;
+}
+label span {
+    color: var(--primary);
+}
+input:focus {
+    border: 1px solid var(--primary);
+    outline: 0;
+    background-color: var(--overlay);
+    box-shadow: 0px 0px 5px 1px var(--primary);
+}
+.button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px !important;
+}
+.button p {
+    color: var(--text);
+    padding: 12px; 
+}
+.button:hover {
+    border: 1px solid var(--primary);
+    background-color: transparent;
+}
+.button:hover p {
+    color: var(--primary);
+
+}
+
+.hidden-input {
+    display: none;
+}
+
+.dev-chosen .dev-input {
+    display: flex;
+}
+.builder-chosen .builder-input {
+    display: flex;
+}
+.content-chosen .content-input {
+    display: flex;
+}
+.creator-chosen .creator-input {
+    display: flex;
+}
+.youtuber-chosen .youtuber-input {
+    display: flex;
+}

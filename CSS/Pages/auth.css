@@ -2,18 +2,62 @@
 
 
 form {
-    width: 350px;
-    background-color: var(--overlay);
+    /* width: 350px;
     border-radius: 8px;
-    padding: 10px 0;
+    background-color: var(--overlay); */
+    /* border: 1px solid red; */
+    /* position: relative; */
 }
-canvas, header {
+
+.card {
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    transition: transform .6s linear;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden !important;
+}
+
+.card-flipped {
+    transform: rotateY(180deg);
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.back,
+.front {
+    border-radius: 8px;
+    background-color: var(--overlay);
+}
+
+
+
+canvas,
+header {
     position: absolute !important;
     z-index: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
 }
-.back {
+
+.back-button {
     position: absolute;
     z-index: 1;
     top: 30px;
@@ -21,20 +65,23 @@ canvas, header {
     font-size: 18px;
     transition: color .3s ease;
 }
-.back:hover a {
+
+.back-button:hover a {
     color: var(--text);
 }
+
 body {
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image:   url('https://wallpapercave.com/wp/wp7930319.png');
+    background-image: url('https://wallpapercave.com/wp/wp7930319.png');
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
 }
+
 .color {
     position: absolute;
     width: 100vw;
@@ -44,12 +91,14 @@ body {
     z-index: -1;
     background: linear-gradient(to top, var(--background), var(--primary-overlay));
 }
+
 .input-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
+
 .text-inp {
     background-color: transparent;
     border: 0;
@@ -58,6 +107,7 @@ body {
     position: relative;
     color: white;
 }
+
 .text-inp-lbl {
     font-size: 12px;
     color: var(--text-light);
@@ -67,6 +117,7 @@ body {
     padding-left: 5px;
     transition: .3s ease-in-out;
 }
+
 .line {
     position: absolute;
     content: "";
@@ -77,35 +128,43 @@ body {
     height: 1px;
     background-color: var(--text-light);
 }
+
 .text-inp:focus {
     outline: 0;
     border-color: var(--primary);
 }
-.text-inp:focus + .text-inp-lbl, .text-inp:not(:placeholder-shown) + .text-inp-lbl {
+
+.text-inp:focus+.text-inp-lbl,
+.text-inp:not(:placeholder-shown)+.text-inp-lbl {
     top: 15px;
     font-size: 14px;
     padding-left: 0;
     color: var(--text);
 }
 
-.text-inp:focus ~ .line {
+.text-inp:focus~.line {
     height: 3px;
     background-color: var(--primary);
     box-shadow: 0px 0px 5px 1px var(--primary-overlay);
 }
+
 .button {
     margin-bottom: 5px;
 }
+
 .submit {
     display: flex;
     justify-content: center;
 }
+
 .check-wrapper {
     padding: 20px;
 }
+
 input[type=checkbox] {
     display: none;
 }
+
 .checkmark {
     display: inline-block;
     width: 20px;
@@ -115,12 +174,14 @@ input[type=checkbox] {
     position: relative;
     transition: background-color .15s ease, box-shadow .15s ease;
 }
+
 .check-wrapper {
-    display: flex; 
+    display: flex;
     align-items: center;
     gap: 5px;
 }
-input[type=checkbox] ~ .checkmark::before {
+
+input[type=checkbox]~.checkmark::before {
     position: absolute;
     content: "";
     left: 50%;
@@ -136,43 +197,65 @@ input[type=checkbox] ~ .checkmark::before {
     transition: opacity .1s ease;
     z-index: 2;
 }
-input[type=checkbox]:checked ~ .checkmark::before {
+
+input[type=checkbox]:checked~.checkmark::before {
     opacity: 1;
 }
-input[type=checkbox]:checked ~ .checkmark {
+
+input[type=checkbox]:checked~.checkmark {
     background-color: var(--primary);
     box-shadow: 0px 0px 10px 1px var(--primary);
 }
+
 .check-wrapper label {
     color: var(--text);
     position: relative;
 }
+
 .check-wrapper label a {
     color: var(--primary);
     font-weight: bold;
 }
+
 .switch-link {
-    display: block; /* This makes it a block element, taking up the full width of its container */
-    margin-top: 10px; /* Adjust the margin to control the spacing between the "Submit" button and the link */
-    color: var(--primary-overlay); /* Text color */
-    text-align: center; /* Center the text horizontally */
-    text-decoration: none; /* Remove the underline by default for links */
-    font-weight: bold; /* Make the text bold or adjust font weight as desired */
-    font-size: 14px; /* Adjust the font size as desired */
+    display: block;
+    /* This makes it a block element, taking up the full width of its container */
+    margin-top: 10px;
+    /* Adjust the margin to control the spacing between the "Submit" button and the link */
+    color: var(--primary-overlay);
+    /* Text color */
+    text-align: center;
+    /* Center the text horizontally */
+    text-decoration: none;
+    /* Remove the underline by default for links */
+    font-weight: bold;
+    /* Make the text bold or adjust font weight as desired */
+    font-size: 14px;
+    /* Adjust the font size as desired */
+    cursor: pointer;
 }
 
 .switch-link:hover {
-    color: var(--primary); /* Change color on hover */
+    color: var(--primary);
+    /* Change color on hover */
 }
-.checkmark, .check-wrapper label {
+
+.checkmark,
+.check-wrapper label {
     cursor: pointer;
 }
+
+
+
 
 @media (max-width: 500px) {
     form {
         width: 80%;
     }
+
     .check-wrapper label {
         font-size: 14px
-    };
+    }
+
+    ;
 }

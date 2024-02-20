@@ -1,0 +1,52 @@
+main {
+    padding: 0px var(--side-padding);
+}
+input, textarea {
+    background: var(--background-light);
+    border: none;
+    padding: 20px 25px;
+    font-size: 17px;
+    color: var(--text-light);
+    outline: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+input:focus, textarea:focus {
+    border: 1px solid var(--primary);
+    outline: 0;
+    background-color: var(--overlay);
+    box-shadow: 0px 0px 5px 1px var(--primary);
+}
+.contact-input {
+    display: flex;
+    flex-direction: column;
+}
+.inputs > * {
+    width: 100%;
+}
+label {
+    color: var(--text-light);
+    padding: 12px;
+}
+label span {
+    color: var(--primary);
+}
+.pinfo {
+    display: flex;
+    gap: 30px;
+}
+.pinfo > * {
+    width: calc(50% - 15px);
+}
+.button {
+    margin: auto;
+    max-width: 80%;
+    width: 600px !important;
+}
+.button p {
+    color: var(--text);
+    padding: 12px;
+}
+.button:hover p {
+    color: var(--primary);
+}
