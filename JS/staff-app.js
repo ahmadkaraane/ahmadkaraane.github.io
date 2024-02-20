@@ -9,6 +9,7 @@ let options = document.querySelector(".options");
 let optionsChildren = Array.from(options.children);
 let positionTitle = document.querySelector(".pos-title");
 let selectedPosition = document.querySelector("#selectedPosition");
+let inputs = document.querySelectorAll("hidden-input");
 let staffForm = document.forms[0];
 const fullNameInput = document.getElementById("full-name");
 const emailInput = document.getElementById("email");
@@ -40,6 +41,11 @@ position.onclick = (e) => {
 };
 for (let i in optionsChildren) {
   optionsChildren[i].onclick = (e) => {
+    contactForm.classList.replace(
+      contactForm.classList[1],
+      `${optionsChildren[i].classList[0]}-chosen`
+    );
+    console.log("hey");
     let classToAdd = optionsChildren[i].classList[0];
     for (let j in optionsChildren) {
       position.classList.remove(`position-${optionsChildren[j].classList[0]}`);

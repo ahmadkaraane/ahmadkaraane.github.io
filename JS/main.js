@@ -89,20 +89,6 @@ for (let i = 0; i < copyText.length; i++) {
   }
 }
 
-let mobileToggle = document.querySelector(".mobile-store-title");
-let mobileCates = document.querySelector(".mobile-cates");
-
-if (mobileToggle !== null) {
-  mobileToggle.addEventListener("click", () => {
-    if (mobileCates.style.height === "0px" || mobileCates.style.height === "") {
-      mobileCates.style.height = mobileCates.scrollHeight + "px";
-    } else {
-      mobileCates.style.height = "0px";
-    }
-    mobileToggle.classList.toggle("store-open");
-  });
-}
-
 let customerHeads = document.querySelector(".customer-heads");
 
 for (let i in config.topCustomers) {
@@ -121,20 +107,39 @@ for (let i in config.topCustomers) {
   }
 }
 
+let faqItem = document.getElementsByClassName("faq-item");
+let faqDesc = document.getElementsByClassName("faq-desc");
+
+if (faqItem != null) {
+  for (let i = 0; i < faqItem.length; i++) {
+    faqItem[i].addEventListener("click", () => {
+      if (faqDesc[i].style.height === "0px" || faqDesc[i].style.height === "") {
+        faqDesc[i].style.height = faqDesc[i].scrollHeight + "px";
+        faqItem[i].classList.toggle("faq-open");
+      } else {
+        faqDesc[i].style.height = "0px";
+        faqItem[i].classList.toggle("faq-open");
+      }
+    });
+  }
+}
+
 let rule = document.getElementsByClassName("rule");
 let ruleDesc = document.getElementsByClassName("rule-desc");
 if (rule != null) {
   for (let i = 0; i < rule.length; i++) {
     rule[i].addEventListener("click", () => {
-      if (
-        ruleDesc[i].style.height === "0px" ||
-        ruleDesc[i].style.height === ""
-      ) {
-        ruleDesc[i].style.height = ruleDesc[i].scrollHeight + "px";
-        rule[i].classList.toggle("rule-open");
-      } else {
-        ruleDesc[i].style.height = "0px";
-        rule[i].classList.toggle("rule-open");
+      if (window.innerWidth <= 992) {
+        if (
+          ruleDesc[i].style.height === "0px" ||
+          ruleDesc[i].style.height === ""
+        ) {
+          ruleDesc[i].style.height = ruleDesc[i].scrollHeight + "px";
+          rule[i].classList.toggle("rule-open");
+        } else {
+          ruleDesc[i].style.height = "0px";
+          rule[i].classList.toggle("rule-open");
+        }
       }
     });
   }
@@ -179,39 +184,6 @@ const getMinecraftOnlinePlayer = async () => {
 getDiscordOnlineUsers();
 getMinecraftOnlinePlayer();
 
-// Get a reference to the ::after pseudo-element by its id
-// Create a function to update the scrolling indicator
-// Function to update the scrolling indicator
-// Function to update scrolling indicators
-function updateScrollIndicators() {
-  const sectionContentContainers =
-    document.querySelectorAll(".section-content");
-
-  sectionContentContainers.forEach((container) => {
-    const scrollIndicator = container.querySelector(".scroll-indicator");
-    if (scrollIndicator) {
-      const containerTop = container.getBoundingClientRect().top;
-      const containerHeight = container.offsetHeight;
-      const windowHeight = window.innerHeight;
-      const scrollY = window.scrollY;
-      // Calculate the scroll indicator position based on container visibility
-      const maxTop = 100 - (30 / window.innerHeight) * 100; // Calculate the maximum value
-      const topPosition = `${Math.min(
-        maxTop,
-        Math.max(0, (1 - containerTop / windowHeight) * 100)
-      ).toFixed(2)}%`;
-
-      scrollIndicator.style.top = topPosition;
-    }
-  });
-}
-
-// Add a scroll event listener to update all scrolling indicators
-window.addEventListener("scroll", updateScrollIndicators);
-
-// Initially update the scrolling indicators when the page loads
-window.addEventListener("load", updateScrollIndicators);
-
 let members = document.querySelectorAll(".member");
 let memberName = document.querySelectorAll(".member-name");
 let memberImage = document.querySelectorAll(".member-img");
@@ -243,3 +215,30 @@ if (signUpBtn) {
     window.location.href = "/signup.html";
   });
 }
+
+function setMainMinHeight() {
+  var headerHeight = document.querySelector("header").offsetHeight;
+  var footerHeight = document.querySelector("footer").offsetHeight;
+
+  var main = document.querySelector("main");
+  var windowHeight = window.innerHeight;
+
+  console.log(windowHeight);
+  var minMainHeight = windowHeight - (headerHeight + footerHeight);
+  main.style.minHeight = minMainHeight + "px";
+}
+
+// Call the function on window resize
+window.addEventListener("resize", setMainMinHeight);
+
+setMainMinHeight();
+console.log(window.innerWidth);
+
+let pcNav = document.querySelector(".pc-nav");
+let heroText = document.querySelector(".hero-text");
+
+let childrenArray = Array.from(pcNav.children);
+
+childrenArray.forEach((element, index) => {
+  element.style.animation = `pc-nav 1s forwards ${0.3 * index}s ease`;
+});

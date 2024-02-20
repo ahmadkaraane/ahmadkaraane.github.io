@@ -77,6 +77,7 @@ for (let i = 0; i < item.length; i++) {
     itemBig.appendChild(itemSideTwo);
     itemBig.appendChild(itemClose);
     document.body.appendChild(itemBig);
+    overlay.style.display = "block";
     document.body.appendChild(overlay);
     setTimeout(() => {
       itemBig.classList.add("item-big-shown");
@@ -109,3 +110,17 @@ window.onscroll = (e) => {
     }
   }
 };
+
+let mobileToggle = document.querySelector(".mobile-store-title");
+let mobileCates = document.querySelector(".mobile-cates");
+
+if (mobileToggle !== null) {
+  mobileToggle.addEventListener("click", () => {
+    if (mobileCates.style.height === "0px" || mobileCates.style.height === "") {
+      mobileCates.style.height = mobileCates.scrollHeight + "px";
+    } else {
+      mobileCates.style.height = "0px";
+    }
+    mobileToggle.classList.toggle("store-open");
+  });
+}
